@@ -36,5 +36,5 @@ The project requires API keys for LLM services. Set them as environment variable
 
 `python calculate_kpi.py`
 
-License
+### License
 This project is for educational and research purposes.
