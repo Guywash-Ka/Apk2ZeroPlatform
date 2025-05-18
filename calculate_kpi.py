@@ -1,11 +1,19 @@
+import os
 from kpi import KPI
+from dotenv import load_dotenv
+
+load_dotenv()
 
 kpi = KPI()
 
+output_dir = os.getenv("OUTPUT_DIR", "llm/llm_output_timetable")
+original_source_dir = os.getenv("SOURCE_DIR", "decompilers/downloaded_apks/Timetable_SPbSU/sources/custom")
+analysis_report_path = os.getenv("ANALYSIS_REPORT", "java_analyzer_report_timetable/analysis_report.json")
+
 all_kpi = kpi.calculate_all_kpi(
-    output_dir="/Users/rodvlasov2003/PycharmProjects/vkr/llm/llm_output_timetable",
-    original_source_dir="/Users/rodvlasov2003/PycharmProjects/vkr/decompilers/downloaded_apks/Timetable_SPbSU/sources/custom",
-    analysis_report_path="/Users/rodvlasov2003/PycharmProjects/vkr/java_analyzer_report_timetable/analysis_report.json",
+    output_dir=output_dir,
+    original_source_dir=original_source_dir,
+    analysis_report_path=analysis_report_path,
 )
 
 print("\n## Сводная таблица KPI\n")
