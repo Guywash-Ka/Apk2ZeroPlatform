@@ -24,6 +24,11 @@ The project requires API keys for LLM services. Set them as environment variable
 `export LLM_API_KEY=your_api_key_here`
 
 ### Usage
+
+### Decompiling APK with JadX
+
+`python apk_decompiler.py -f path/to/your_app.apk -o output_directory`
+
 #### Analyzing Java Files
 
 `python java_analyzer.py --directory path/to/java/files --output analysis_output`
