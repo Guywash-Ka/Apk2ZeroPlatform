@@ -9,6 +9,8 @@ from typing import Dict, List, Any, Optional, Tuple
 from pathlib import Path
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
+from dotenv import load_dotenv
+
 # Настройка логирования
 logging.basicConfig(
     level=logging.INFO,
